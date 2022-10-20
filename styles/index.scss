@@ -1,0 +1,43 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(219, 11, 43);
+  background: linear-gradient(
+    209deg,
+    rgba(219, 11, 43, 1) 0%,
+    rgba(233, 148, 215, 1) 86%
+  );
+  font-family: "Fasthand", cursive;
+  min-height: 100vh;
+}
+.container {
+  text-align: center;
+  .word-container {
+    transition: all 0.1s ease-in-out;
+    .word-start {
+      font-size: 100px;
+      margin-bottom: 0px;
+      margin-top: 0;
+    }
+    .word-end {
+      margin-top: 20px;
+      font-size: 70px;
+    }
+  }
+  .icon-heart {
+    transition: all 0.5s ease-in-out;
+  }
+}
+@media only screen and (max-width: 46.1875em) {
+  .word-container {
+    .word-start {
+      font-size: 80px !important;
+    }
+    .word-end {
+      font-size: 50px !important;
+    }
+  }
+}

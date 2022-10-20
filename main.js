@@ -7,18 +7,25 @@ function handleAnimate() {
       setInterval(resolve, ms);
     });
   }
-  wordAnimate(1000)
+  wordAnimate(0)
     .then(() => {
-      wordBlock.animate([{ transform: " rotate3d(2, 1, 2, 360deg)" }], {
-        duration: 1000,
-        iterations: 4,
-      });
+      wordBlock.animate(
+        {
+          opacity: [0.2, 0.5],
+          transform: ['rotate(0deg)', 'rotate(360deg)']
+        },
+        {
+          direction: "alternate",
+          duration: 1000,
+          iterations: 4,
+        }
+      );
       return wordAnimate(4000);
     })
     .then(() => {
       icon.style.fontSize = "230px";
       icon.style.color = "#FF0800";
-      wordBlock.style.color = "#FFFFFF"
+      wordBlock.style.color = "#FFFFFF";
       return wordAnimate(5000);
     })
     .then(() => {
@@ -27,9 +34,10 @@ function handleAnimate() {
           opacity: 0.1,
           left: "+=50",
           height: "toggle",
-          fontSize: "10px"
+          fontSize: "10px",
         },
         {
+          direction: "alternate",
           duration: 2000,
           iterations: Infinity,
         }
@@ -38,11 +46,17 @@ function handleAnimate() {
     })
     .then(() => {
       setInterval(() => {
-        wordBlock.animate([{ transform: " rotate3d(2, 1, 2, 360deg)" }], {
-          duration: 1000,
-          iterations: 4,
-        });
-      }, 6000);
+        wordBlock.animate(
+          {
+            opacity: [0.2, 0.8],
+             transform: ["scale(0.01)", "scale(1)"],
+          },
+          {
+            duration: 4000,
+            iterations: 1,
+          }
+        );
+      }, 8000);
     });
 }
 handleAnimate();

@@ -16,7 +16,7 @@ function handleAnimate() {
       return wordAnimate(4000);
     })
     .then(() => {
-      icon.style.fontSize = "200px";
+      icon.style.fontSize = "230px";
       icon.style.color = "#FF0800";
       wordBlock.style.color = "#FFFFFF"
       return wordAnimate(5000);

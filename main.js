@@ -44,20 +44,5 @@ function handleAnimate() {
         });
       }, 6000);
     });
-  //   var wordAnimate = new Promise(function (resolve) {
-  //     resolve();
-  //   });
-  //   wordAnimate
-  //     .then(() => {
-  //       wordBlock.animate([{ transform: " rotate3d(2, 1, 2, 360deg)" }], {
-  //         duration: 1000,
-  //         iterations: 4,
-  //       });
-  //     })
-  //     .then(() => setTimeout(()=>(icon.style.fontSize = "100px")), 20000);
-  //   wordBlock.animate([{ transform: " rotate3d(2, 1, 2, 360deg)" }], {
-  //     duration: 1000,
-  //     iterations: 4,
-  //   });
 }
 handleAnimate();
